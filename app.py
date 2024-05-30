@@ -13,7 +13,7 @@ if uploaded_file is not None:
 
     # fetch unique users
     user_list = df['user'].unique().tolist()
-    user_list.remove('group_notification')
+    # user_list.remove('group_notification')
     user_list.sort()
     user_list.insert(0,"Overall")
 
@@ -115,17 +115,17 @@ if uploaded_file is not None:
         st.pyplot(fig)
 
         # emoji analysis
-        emoji_df = helper.emoji_helper(selected_user,df)
-        st.title("Emoji Analysis")
+        # emoji_df = helper.emoji_helper(selected_user,df)
+        # st.title("Emoji Analysis")
 
         col1,col2 = st.columns(2)
 
-        with col1:
-            st.dataframe(emoji_df)
-        with col2:
-            fig,ax = plt.subplots()
-            ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
-            st.pyplot(fig)
+        # with col1:
+        #     st.dataframe(emoji_df)
+        # with col2:
+        #     fig,ax = plt.subplots()
+        #     ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
+        #     st.pyplot(fig)
 
 
 

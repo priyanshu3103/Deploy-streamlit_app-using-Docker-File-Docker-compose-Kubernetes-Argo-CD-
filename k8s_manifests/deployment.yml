@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+  labels:
+    app: web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+        - name: web-container
+          image: 'priyanshu1979/whatsapp_chat_analyzer:01'
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: 1500m
+            requests:
+              memory: 512Mi
+              cpu: 1500m

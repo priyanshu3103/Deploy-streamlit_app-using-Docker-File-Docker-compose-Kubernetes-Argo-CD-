@@ -1,0 +1,8 @@
+version: '3'
+services:
+  
+  deploy:
+    image: 'priyanshu1979/whatsapp_chat_analyzer:01'
+    ports:
+      - "8501:8501"
+    
